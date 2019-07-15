@@ -1,6 +1,6 @@
 package ejercicio;
 
-abstract public class Vehiculo {
+abstract public class Vehiculo implements Comparable<Vehiculo> {
 
 	String marca;
 	String modelo;
@@ -31,4 +31,8 @@ abstract public class Vehiculo {
 		this.precio = precio;
 	}
 	
+	public String getMarcaModelo() {
+		return this.getMarca() + " " + this.getModelo();
+	}
+
 }
